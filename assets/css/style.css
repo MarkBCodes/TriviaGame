@@ -21,5 +21,11 @@ body {
 }
 
 /* CSS for the timer to change colors at the last seconds */
+.last-seconds {
+  color: red;
+}
 
 /* margin for the options for the questions */
+.option {
+  margin: 15px;
+}
