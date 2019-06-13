@@ -70,5 +70,31 @@ var trivia = {
 
     // ask first question
     trivia.nextQuestion();
+  },
+  // method to loop through and display questions and options
+  nextQuestion: function() {
+    // set timer to 20 seconds each question
+    trivia.timer = 10;
+    $("#timer").removeClass("last-seconds");
+    $("#timer").text(trivia.timer);
+
+    // to prevent timer speed up
+    if (!trivia.timerOn) {
+      trivia.timerId = setInterval(trivia.timerRunning, 1000);
+    }
+
+    // gets all the questions then indexes the current questions
+    var questionContent = Object.values(trivia.questions)[trivia.currentSet];
+    $("#question").text(questionContent);
+
+    // an array of all the user options for the current question
+    var questionOptions = Object.values(trivia.options)[trivia.currentSet];
+
+    // creates all the trivia guess options in the html
+    $.each(questionOptions, function(index, key) {
+      $("#options").append(
+        $('<button class="option btn btn-info btn-lg">' + key + "</button>")
+      );
+    });
   }
 };
