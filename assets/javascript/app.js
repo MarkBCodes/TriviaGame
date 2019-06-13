@@ -180,5 +180,17 @@ var trivia = {
         "<h3>Better luck next time! " + currentAnswer + "</h3>"
       );
     }
+  },
+  // method to remove previous question results and options
+  guessResult: function() {
+    // increment to next question set
+    trivia.currentSet++;
+
+    // remove the options and results
+    $(".option").remove();
+    $("#results h3").remove();
+
+    // begin next question
+    trivia.nextQuestion();
   }
 };
