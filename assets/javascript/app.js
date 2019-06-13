@@ -96,5 +96,20 @@ var trivia = {
         $('<button class="option btn btn-info btn-lg">' + key + "</button>")
       );
     });
-  }
+  },
+    // method to decrement counter and count unanswered if timer runs out
+    timerRunning: function () {
+        // if timer still has time left and there are still questions left to ask
+        if (
+            trivia.timer > -1 &&
+            trivia.currentSet < Object.keys(trivia.questions).length
+        ) {
+            $("#timer").text(trivia.timer);
+            trivia.timer--;
+            if (trivia.timer === 4) {
+                $("#timer").addClass("last-seconds");
+            }
+        }
+
+
 };
