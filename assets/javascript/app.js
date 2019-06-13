@@ -110,6 +110,33 @@ var trivia = {
                 $("#timer").addClass("last-seconds");
             }
         }
-
+        // the time has run out and increment unanswered, run result
+        else if (trivia.timer === -1) {
+            trivia.unanswered++;
+            trivia.result = false;
+            clearInterval(trivia.timerId);
+            resultId = setTimeout(trivia.guessResult, 1000);
+            $("#results").html(
+                "<h3>Out of time! The answer was " +
+                Object.values(trivia.answers)[trivia.currentSet] +
+                "</h3>"
+            );
+        }
+        // if all the questions have been shown end the game, show results
+        else if (trivia.currentSet === Object.keys(trivia.questions).length) {
+            // adds results of game (correct, incorrect, unanswered) to the page
+            $("#results").html(
+                "<h3>Thank you for playing!</h3>" +
+                "<p>Correct: " +
+                trivia.correct +
+                "</p>" +
+                "<p>Incorrect: " +
+                trivia.incorrect +
+                "</p>" +
+                "<p>Unaswered: " +
+                trivia.unanswered +
+                "</p>" +
+                "<p>Please play again!</p>"
+            );
 
 };
