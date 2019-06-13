@@ -4,3 +4,18 @@ body {
   background-repeat: no-repeat;
   background-size: 100%;
 }
+
+/* CSS for Jumbotron */
+.jumbotron .container {
+  text-align: center;
+}
+
+.jumbotron {
+  background: rgba(204, 204, 204, 0.7);
+}
+
+/* CSS for Start Button */
+
+/* CSS for the timer to change colors at the last seconds */
+
+/* margin for the options for the questions */
