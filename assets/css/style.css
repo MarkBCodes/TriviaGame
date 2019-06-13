@@ -1,0 +1,6 @@
+/* for background picture and formatting*/
+body {
+  background: url("../images/friendsCards.jpg");
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
