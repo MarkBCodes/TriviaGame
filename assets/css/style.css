@@ -14,7 +14,11 @@ body {
   background: rgba(204, 204, 204, 0.7);
 }
 
-/* CSS for Start Button */
+/* CSS for Start Button color */
+#start {
+  background-color: lightseagreen;
+  border-color: lightseagreen;
+}
 
 /* CSS for the timer to change colors at the last seconds */
 
