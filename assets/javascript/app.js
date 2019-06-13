@@ -43,5 +43,32 @@ var trivia = {
     q5: "Rachel",
     q6: "Chandler",
     q7: "Barry"
+  },
+  // trivia methods
+  // method to initialize game
+  startGame: function() {
+    // restarting game results
+    trivia.currentSet = 0;
+    trivia.correct = 0;
+    trivia.incorrect = 0;
+    trivia.unanswered = 0;
+    clearInterval(trivia.timerId);
+
+    // show game section
+    $("#game").show();
+
+    //  empty last results
+    $("#results").html("");
+
+    // show timer
+    $("#timer").text(trivia.timer);
+
+    // remove start button
+    $("#start").hide();
+
+    $("#remaining-time").show();
+
+    // ask first question
+    trivia.nextQuestion();
   }
 };
