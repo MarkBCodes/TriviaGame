@@ -2,11 +2,11 @@
 
 ## Finished product:
 
-https://gudbrandr42.github.io/TriviaGame
+https://MarkBCodes.github.io/TriviaGame
 
 ## Repo:
 
-https://github.com/Gudbrandr42/TriviaGame
+https://github.com/MarkBCodes/TriviaGame
 
 You'll create a trivia form with multiple choice or true/false options (your choice).
 
